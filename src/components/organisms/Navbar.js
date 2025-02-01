@@ -1,14 +1,11 @@
 "use client";
 
-import { navData } from "@/data";
-import { useInformation } from "@/store/useInformation";
+import { navData, dataSite } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCartArrowDown } from "react-icons/fa";
 
 const Navbar = () => {
-  const { dataSite } = useInformation();
-
   return (
     <div className="w-full bg-white sticky top-0 z-20">
       <nav className="container mx-auto">
