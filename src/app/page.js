@@ -63,6 +63,35 @@ export default function Home() {
         </section>
       </div>
 
+      {/* Video Background Section */}
+      <section className="relative h-[1000px]">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute w-full h-full object-cover"
+        >
+          <source src="/videos/video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black opacity-40" />
+
+        <div className="relative z-10 flex flex-col justify-center h-full container mx-auto gap-5">
+          <h1 className="w-max -skew-x-3 text-6xl font-bold text-white bg-primary px-2 py-1">
+            Excel in Leadership and Management
+          </h1>
+
+          <p className="text-white text-xl mt-4">
+            Mastering leadership and management in financials and marketing is
+            crucial in today's competitive business environment. It empowers you
+            to drive strategic growth, optimize resources, and lead teams
+            effectively. Enhance your decision-making skills, boost your career
+            prospects, and become a pivotal force in your organization.
+            Understanding these principles allows you to navigate complex
+            business landscapes and achieve sustainable success.
+          </p>
+        </div>
+      </section>
+
       {/* Services */}
       {dataSite?.services?.length > 0 && (
         <div
