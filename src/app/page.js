@@ -82,7 +82,7 @@ export default function Home() {
 
           <p className="text-white text-xl mt-4">
             Mastering leadership and management in financials and marketing is
-            crucial in today's competitive business environment. It empowers you
+            crucial in today´s competitive business environment. It empowers you
             to drive strategic growth, optimize resources, and lead teams
             effectively. Enhance your decision-making skills, boost your career
             prospects, and become a pivotal force in your organization.
