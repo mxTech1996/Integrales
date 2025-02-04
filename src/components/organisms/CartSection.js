@@ -6,22 +6,28 @@ import {
   Payments,
   PaymentsV2,
   CartSection,
+  useCart
 } from "ecommerce-mxtech";
 import { useRouter } from "next/navigation";
 import { FaChevronLeft } from "react-icons/fa";
 import { pageName } from "@/data";
+import { useEffect } from "react";
 
 const validDiscountCode = ["CAPAPAY10", "CAPAPAY20"];
 const colorRed = "#3c4ae7";
 
 const CartSectionComponent = () => {
   const [step, setStep] = useState("cart"); // cart | payment
+  const {products} = useCart()
   const [isValidDiscount, setIsValidDiscount] = useState(false);
   const router = useRouter();
 
   const onChangeDiscount = (value) => {
     setIsValidDiscount(validDiscountCode.includes(value));
   };
+  useEffect(()=>{
+    window.dispatchEvent(new Event("resize"));
+  }, products)
 
   return (
     <div className="w-full flex justify-center mt-10 mb-20">
